@@ -73,6 +73,7 @@ def atualizar_planilha_com_dados(caminho_planilha, caminho_txt_1, caminho_txt_2)
     df_planilha["Marca"] = df_planilha.apply(lambda row: buscar_valor(row, "Marca"), axis=1)
 
     # Salvar o resultado na mesma planilha
+    # sla
     try:
         df_planilha.to_excel(caminho_planilha, index=False)
         print(f"A planilha '{caminho_planilha}' foi atualizada com sucesso.")
